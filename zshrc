@@ -1,4 +1,4 @@
-xxZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
@@ -14,8 +14,8 @@ ZSH_DISABLE_COMPFIX=true
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
-#unalias rm # No interactive rm by default (brought by plugins/common-aliases)
-#unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
+unalias rm # No interactive rm by default (brought by plugins/common-aliases)
+unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
@@ -67,3 +67,6 @@ export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
 export EDITOR=code
+
+# Set ipdb as the default Python debugger
+export PYTHONBREAKPOINT=ipdb.set_trace
