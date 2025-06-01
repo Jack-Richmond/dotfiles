@@ -24,7 +24,7 @@ require "http"
 
 $all_good = true
 
-def check(label, &block)
+def check(label)
   puts "Checking #{label}..."
   result, message = yield
   $all_good = $all_good && result
